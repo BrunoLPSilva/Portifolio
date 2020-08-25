@@ -5,6 +5,44 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+
+--font-primary: "baloo da 2",serif;
+--font-secundary: "Josefin Slab",serif;
+--font-action:  "muli", serif;
+
+    
+}
+
+.hamburguer{
+  
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer{
+    right: 16rem;
+}
+
+.line {
+    width: 100%;
+    background-color: white;
+    height: .1rem;
+    box-shadow: 0.1rem 0.1rem 1px black;
+    
+  
 }
 
 header{
@@ -47,8 +85,8 @@ position: relative;
 }
 .banner h1{
     color: #ffffff;
-    font-size: 3.5rem;
-    font-family: "baloo da 2",serif;
+    font-size: 3.0rem;
+    font-family:var(--font-primary) ;
     font-weight: 200;
     text-shadow:.3rem .3rem 2px rgba(0,0,0.4);
     margin-bottom: 1rem; 
@@ -58,7 +96,7 @@ position: relative;
 .banner p{
     color: #fff;
     font-size: 2rem;
-    font-family: "Josefin Slab",serif;
+    font-family: var(--font-secundary);
      text-shadow:.1rem .1rem 2px rgba(0,0,0.4);
      margin-bottom: 2rem;
      opacity: 0;
@@ -67,7 +105,7 @@ position: relative;
 
 }
 .banner button{
-    font-family: "muli", serif;
+    font-family:var(--font-action);
     color:#ffffff;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -97,3 +135,62 @@ position: relative;
         opacity: 1 ;
     }
 }
+
+.sidebar{
+width: 20rem;
+height: 100vh;
+background-color: #fff;
+position: fixed;
+top: 0;
+right:-20rem;
+transition: all 1s;
+}
+
+.show-menu.sidebar{
+    right: 0;
+}
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.menu-item{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu-link{
+    font-family: var(--font-action);
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: #6a3093;
+}
+.social-media{
+    background-color: #fff;
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media i {
+    background-color: #fff;
+    color:black;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.social-media i:hover{
+    color: blue;
+}
+
